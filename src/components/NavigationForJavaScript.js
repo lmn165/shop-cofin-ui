@@ -8,6 +8,7 @@ const NavigationForJavaScript = () => (
 <Nav>
     <NavList>
         <NavItem><Link to='cofin-map'>cofin-map</Link></NavItem>
+        <NavItem><Link to='cofin-world-map'>cofin-world-map</Link></NavItem>
     </NavList>
 </Nav>
 </>

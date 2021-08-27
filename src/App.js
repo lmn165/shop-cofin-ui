@@ -1,11 +1,9 @@
 import React from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
-import NavigationForJavaScript from './components/NavigationForJavaScript'
+import { KoreaMap, CofinWorldMap, NavigationForJavaScript } from 'components/index'
 import styled from 'styled-components'
-import Header from './Layout/Header'
-import HomePage from "./pages/HomePage";
-import CofinMap from './components/CofinMap'
-import Navigation from './Layout/Navigation'
+import { Header, Navigation } from 'Layout/index'
+import { HomePage } from "pages/index";
 
 const App = () => (
 <>
@@ -18,7 +16,8 @@ const App = () => (
 <Route exact path='/' component = { HomePage }/>
 <Redirect from='/home' to = { '/' }/>
 
-<Route exact path='/cofin-map' component = { CofinMap }/>
+<Route exact path='/cofin-map' component = { KoreaMap }/>
+<Route exact path='/cofin-world-map' component = { CofinWorldMap }/>
 </Switch>
 </>
 )
