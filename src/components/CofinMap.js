@@ -46,7 +46,6 @@ const ConfinMap = () => {
               <optgroup label="관심 장소 선택">
                 <option>선별 진료소</option>
                 <option>확진자 발생 위치</option>
-                <option></option>
               </optgroup>
             </Selection>
           </SelectionLi>
