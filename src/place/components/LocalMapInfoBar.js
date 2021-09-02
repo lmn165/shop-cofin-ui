@@ -1,38 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from 'styled-components'
-/* global kakao */
-const { kakao } = window;
 
-const ConfinMap = () => {
-  useEffect(() => {
-    let mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-      center: new kakao.maps.LatLng(37.499400, 127.029015), // 지도의 중심좌표
-      level: 3 // 지도의 확대 레벨
-    };
-    
-    let map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    
-    // 마커가 표시될 위치입니다 
-    let markerPosition  = new kakao.maps.LatLng(37.499400, 127.029015); 
-    
-    // 마커를 생성합니다
-    let marker = new kakao.maps.Marker({
-      position: markerPosition
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-      console.log("loading kakaomap");
-    }, []);
-
+const LocalMapInfoBar = () => {
   return (
-    <MapDiv id="map"></MapDiv>
+    <InfoUl>
+        <li>
+        <LabelDiv><InfoLabel>진료소 A</InfoLabel></LabelDiv>
+        <InfoDiv></InfoDiv>
+        </li>
+        <li>
+        <LabelDiv><InfoLabel>진료소 B</InfoLabel></LabelDiv>
+        </li>
+        <li>
+        <LabelDiv><InfoLabel>진료소 C</InfoLabel></LabelDiv>
+        </li>
+        <li>
+        <LabelDiv><InfoLabel>진료소 D</InfoLabel></LabelDiv>
+        </li>
+    </InfoUl>
   );      
-        
 };
 
-export default ConfinMap
+export default LocalMapInfoBar
 
 const LayoutDiv = styled.div`
   width: 100%;

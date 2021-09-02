@@ -48,5 +48,5 @@ const CofinWorldMap = () =>{
 export default CofinWorldMap;
 
 const WorldMapDiv = styled.div`
-    text-align: center;
+  text-align: center;
 `
