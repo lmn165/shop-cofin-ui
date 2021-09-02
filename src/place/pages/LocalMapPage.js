@@ -45,5 +45,5 @@ const RightSideDiv = styled.div`
 float: left;
 height: 720px;
 min-width: 140px;
-width: 12%
+width: 11%
 `
