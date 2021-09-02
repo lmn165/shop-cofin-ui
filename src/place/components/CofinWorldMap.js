@@ -5,17 +5,18 @@ import styled from 'styled-components';
 const CofinWorldMap = () =>{
     const data =
     [
-      { country: "cn", value: 1389618778 }, // china
-      { country: "in", value: 1311559204 }, // india
-      { country: "us", value: 331883986 },  // united states
-      { country: "id", value: 264935824 },  // indonesia
-      { country: "pk", value: 210797836 },  // pakistan
-      { country: "br", value: 210301591 },  // brazil
-      { country: "ng", value: 208679114 },  // nigeria
-      { country: "bd", value: 161062905 },  // bangladesh
-      { country: "ru", value: 141944641 },  // russia
-      { country: "mx", value: 127318112 },   // mexico
-      { country: "kr", value: 1 }   // korea
+      { country: "in", value: 32857937 }, // india
+      { country: "us", value: 40330712 },  // united states
+      { country: "br", value: 20804215 },  // brazil
+      { country: "ru", value: 6937333 },  // russia
+      { country: "gb", value: 6825074 },   // UK
+      { country: "fr", value: 6783329 },   // france
+      { country: "tr", value: 6412277 },   // turkey
+      { country: "ar", value: 5190948 },   // Argentina
+      { country: "ir", value: 5025233 },   // Iran
+      { country: "co", value: 4911082 },   // Colombia
+
+      { country: "kr", value: 255401 }   // korea
     ]
 
     const stylingFunction = ({
@@ -28,7 +29,8 @@ const CofinWorldMap = () =>{
         const opacityLevel =
           0.1 + (1.5 * (countryValue - minValue)) / (maxValue - minValue);
         return {
-          fill: country === 'US' ? 'blue' : color,
+          // fill: country === 'US' ? 'blue' : color,
+          fill: countryValue < 300000 ? 'green' : color,
           fillOpacity: opacityLevel,
           stroke: 'green',
           strokeWidth: 1,
